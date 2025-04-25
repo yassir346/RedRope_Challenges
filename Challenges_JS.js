@@ -7,8 +7,10 @@ const produits = [
 let keyWord;
 function filtrerProduit(produits, keyWord){
     produits.forEach(produit => {
-        if(keyWord === produit.nom){
+        if(produit.nom.toLowerCase().includes(keyWord.toLowerCase())){
             console.log(produit.nom);
         }
     });
 }
+
+filtrerProduit(produits, "er");
